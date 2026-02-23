@@ -1,0 +1,107 @@
+RevPasswordManager/
+│
+├── pom.xml                              # Maven project configuration
+├── .gitignore                           # Git ignore rules
+│
+├── README.md                            # Complete project documentation
+├── QUICKSTART.md                        # 5-minute quick start guide
+├── SETUP_INSTRUCTIONS.md                # Detailed setup instructions
+├── INTELLIJ_SETUP.md                    # IntelliJ IDEA import guide
+├── ARCHITECTURE.md                      # System architecture documentation
+├── ERD.md                               # Entity Relationship Diagram
+├── PROJECT_SUMMARY.md                   # Project deliverables summary
+│
+├── database-scripts/
+│   └── schema.sql                       # MySQL database schema
+│
+├── src/
+│   ├── main/
+│   │   ├── java/com/revature/passwordmanager/
+│   │   │   │
+│   │   │   ├── Main.java               # Application entry point & UI
+│   │   │   │
+│   │   │   ├── config/
+│   │   │   │   └── DatabaseConfig.java # Database connection management
+│   │   │   │
+│   │   │   ├── model/                  # Domain entities
+│   │   │   │   ├── User.java          # User account entity
+│   │   │   │   ├── VaultEntry.java    # Password vault entry entity
+│   │   │   │   └── OTP.java           # One-Time Password entity
+│   │   │   │
+│   │   │   ├── repository/             # Data access layer (JDBC)
+│   │   │   │   ├── UserRepository.java      # User CRUD operations
+│   │   │   │   ├── VaultRepository.java     # Vault CRUD operations
+│   │   │   │   └── OTPRepository.java       # OTP CRUD operations
+│   │   │   │
+│   │   │   ├── service/                # Business logic layer
+│   │   │   │   ├── AuthService.java         # Authentication & user management
+│   │   │   │   └── VaultService.java        # Password vault management
+│   │   │   │
+│   │   │   └── util/                   # Utility classes
+│   │   │       ├── EncryptionUtil.java      # BCrypt & AES encryption
+│   │   │       └── PasswordGenerator.java   # Random password generation
+│   │   │
+│   │   └── resources/
+│   │       ├── database.properties     # Database connection settings
+│   │       └── log4j2.xml             # Log4J logging configuration
+│   │
+│   └── test/
+│       ├── java/com/revature/passwordmanager/
+│       │   ├── service/
+│       │   │   ├── AuthServiceTest.java     # Authentication tests (12 tests)
+│       │   │   └── VaultServiceTest.java    # Vault service tests (13 tests)
+│       │   │
+│       │   └── util/
+│       │       └── PasswordGeneratorTest.java # Password generator tests (13 tests)
+│       │
+│       └── resources/
+│           └── (test resources)
+│
+└── logs/                                # Created at runtime
+    ├── revpassword.log                  # Application logs
+    └── revpassword-rolling.log          # Rolling logs
+
+PROJECT STATISTICS:
+─────────────────────
+Total Java Files:        15 files
+Test Files:              3 files
+Total Tests:             38+ test methods
+Lines of Code:           ~3,500+ lines
+Configuration Files:     4 files
+Documentation Files:     8 files
+Database Tables:         3 tables
+
+TECHNOLOGY STACK:
+────────────────
+Language:      Java 11+
+Build Tool:    Maven 3.6+
+Database:      MySQL 8.0+
+JDBC:          MySQL Connector 8.0.33
+Logging:       Log4J 2.20.0
+Testing:       JUnit 5.10.0
+Mocking:       Mockito 5.5.0
+Security:      BCrypt (jBCrypt 0.4)
+
+KEY FEATURES:
+────────────
+✅ User Authentication (signup/login/password recovery)
+✅ Password Vault Management (add/view/update/delete/search)
+✅ Password Encryption (BCrypt + AES-256)
+✅ Master Password Protection
+✅ OTP Generation (6-digit, 5-min expiry)
+✅ Random Password Generation (customizable)
+✅ Security Questions for Recovery
+✅ Comprehensive Logging
+✅ Unit Tests with High Coverage
+✅ Layered Architecture
+✅ JDBC Database Operations
+✅ SQL Injection Prevention
+
+TO GET STARTED:
+──────────────
+1. Open the RevPasswordManager folder in IntelliJ IDEA
+2. Update src/main/resources/database.properties with your MySQL credentials
+3. Run src/main/java/com/revature/passwordmanager/Main.java
+4. Follow the on-screen prompts to create an account
+
+For detailed setup instructions, see SETUP_INSTRUCTIONS.md

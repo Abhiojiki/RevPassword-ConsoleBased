@@ -354,9 +354,6 @@ Log levels can be configured in `src/main/resources/log4j2.xml`
 
 - Your Name - RevPassword Manager Development
 
-## 📄 License
-
-This project is part of the Revature training program.
 
 ## 🔮 Future Enhancements
 
